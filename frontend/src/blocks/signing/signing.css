@@ -1,0 +1,16 @@
+.signing {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 650px) {
+    .signing {
+        max-width: 260px;
+        margin-top: 40px;
+    }
+}

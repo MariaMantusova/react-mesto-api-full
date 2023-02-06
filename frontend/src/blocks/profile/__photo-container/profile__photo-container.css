@@ -1,0 +1,21 @@
+.profile__photo-container {
+    border-radius: 50%;
+    height: 120px;
+    object-fit: cover;
+    position: relative;
+    width: 120px;
+    cursor: pointer;
+}
+
+.profile__photo-container:hover:before {
+    content: "";
+    background-color: rgba(0, 0, 0, .8);
+    background-image: url("../../../images/vector-edit-button.svg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 26px;
+    border-radius: 50%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}

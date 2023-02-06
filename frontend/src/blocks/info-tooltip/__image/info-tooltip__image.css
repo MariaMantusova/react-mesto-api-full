@@ -1,0 +1,7 @@
+.info-tooltip__image {
+    height: 120px;
+    width: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

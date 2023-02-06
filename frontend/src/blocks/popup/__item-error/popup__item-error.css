@@ -1,0 +1,11 @@
+.popup__item-error {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.25;
+    color: #FF0000;
+    margin: 5px 0 0;
+    max-width: 358px;
+    opacity: 0;
+    display: block;
+    min-height: 32px;
+}

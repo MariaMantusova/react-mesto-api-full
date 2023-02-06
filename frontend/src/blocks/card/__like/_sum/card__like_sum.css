@@ -1,0 +1,10 @@
+.card__like_sum {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    position: absolute;
+    top: 24px;
+    left: 232px;
+}

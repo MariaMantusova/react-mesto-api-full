@@ -1,0 +1,9 @@
+.header__registration-link_email {
+
+}
+
+@media screen and (max-width: 650px) {
+    .header__registration-link_email {
+        display: none;
+    }
+}

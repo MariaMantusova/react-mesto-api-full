@@ -1,0 +1,10 @@
+.header__links-container {
+    display: flex;
+    gap: 24px;
+}
+
+@media screen and (max-width: 650px) {
+    .header__links-container {
+        display: block;
+    }
+}

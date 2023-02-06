@@ -1,0 +1,27 @@
+.signing__button {
+    width: 100%;
+    margin-top: 216px;
+    padding: 14px 84px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: black;
+    background-color: #FFFFFF;
+    border: #FFFFFF;
+    border-radius: 2px;
+    opacity: 1;
+    transition: opacity 0.3s linear;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+    .signing__button {
+        margin-top: 173px;
+        padding: 14px 35px;
+        font-size: 16px;
+    }
+}
+
+.signing__button:hover {
+    opacity: 0.85;
+}

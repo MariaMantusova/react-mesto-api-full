@@ -1,0 +1,9 @@
+.card__image {
+    width: 282px;
+    height: 282px;
+    object-fit: cover;
+    cursor: pointer;
+    background-color: black;
+    color: #FFFFFF;
+    background-size: cover;
+}

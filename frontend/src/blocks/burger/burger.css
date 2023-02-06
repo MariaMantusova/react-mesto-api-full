@@ -1,0 +1,18 @@
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    .burger {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity 0.3s linear;
+    }
+}
+
+.burger:hover {
+    opacity: 0.6;
+}
