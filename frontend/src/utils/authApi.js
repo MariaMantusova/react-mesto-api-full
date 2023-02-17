@@ -61,9 +61,9 @@ class AuthApi {
 }
 
 const authApiOption = {
-    url: "https://auth.nomoreparties.co",
+    url: "https://api.project.mymesto.nomoredomainsclub.ru",
     headers: {
-        "Content-Type": "application/json" ,
+        "Content-Type": "application/json",
     },
 }
 
