@@ -2,127 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84f5cfb9-a2ea-4ab4-ac28-063e08dc4ecf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/react-mesto-auth.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/burger-links/burger-links.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/burger/__email/burger__email.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/burger/__link/burger__link.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/burger/burger.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/card/__delete-button/_inactive/card__delete-button_inactive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/card/__delete-button/card__delete-button.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/card/__image/card__image.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/card/__info/card__info.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/card/__like/_active/card__like_active.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/card/__like/_sum/card__like_sum.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/card/__like/card__like.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/card/__title/card__title.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/card/card.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/cards/cards.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/footer/__title/footer__title.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/footer/footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/header/__link/header__link.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/header/__links-container/header__links-container.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/header/__logo/header__logo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/header/__registration-link/_email/header__registration-link_email.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/header/__registration-link/_main/header__registration-link_main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/header/__registration-link/header__registration-link.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/header/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/info-tooltip-container/_opened/info-tooltip-container_opened.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/info-tooltip-container/info-tooltip-container.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/info-tooltip/__caption/info-tooltip__caption.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/info-tooltip/__image/_fail/info-tooltip__image_fail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/info-tooltip/__image/_success/info-tooltip__image_success.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/info-tooltip/__image/info-tooltip__image.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/info-tooltip/info-tooltip.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/page/page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__button-close/popup__button-close.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__button/_disabled/popup__button_disabled.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__button/popup__button.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__caption/popup__caption.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__container/popup__container.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__form/popup__form.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__image-container/popup__image-container.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__image/popup__image.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__item-error/_active/popup__item-error_active.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__item-error/popup__item-error.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__item/_type/_error/popup__item_type_error.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__item/popup__item.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__title/_theme/popup__title_theme-confirm.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/__title/popup__title.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/_opened/popup_opened.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/_theme/popup_theme_image.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/popup/popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/profile/__add-button/profile__add-button.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/profile/__description/profile__description.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/profile/__edit-button/profile__edit-button.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/profile/__info/profile__info.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/profile/__name/profile__name.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/profile/__photo-container/profile__photo-container.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/profile/__photo/profile__photo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/profile/profile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/signing/__button/signing__button.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/signing/__form/signing__form.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/signing/__input/signing__input.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/signing/__link/_registration/signing__link_registration.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/signing/__link/signing__link.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/signing/__title/signing__title.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/blocks/signing/signing.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AddCardPopup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Card.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/EditAvatarPopup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/EditProfilePopup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ImagePopup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InfoTooltip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/PopupWithForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProtectedRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/contexts/CurrentUserContext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/delete-button.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/failed.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/header-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/success.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/vector-add-button.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/vector-close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/vector-edit-button.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/vector-heart-full.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/vector-heart.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/tests/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/authApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/vendor/fonts/font-inter/Inter-Black.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/vendor/fonts/font-inter/Inter-Black.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/vendor/fonts/font-inter/Inter-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/vendor/fonts/font-inter/Inter-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/vendor/fonts/font-inter/Inter-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/vendor/fonts/font-inter/Inter-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/vendor/fonts/fonts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/vendor/normalize.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675696179270</updated>
       <workItem from="1675696180634" duration="16994000" />
-      <workItem from="1676642725501" duration="77000" />
+      <workItem from="1676642725501" duration="511000" />
     </task>
     <servers />
   </component>
