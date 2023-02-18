@@ -82,6 +82,7 @@ const login = (req, res, next) => {
           maxAge: 3600000,
           httpOnly: true,
           secure: true,
+          sameSite: "none",
         })
         .send({ token: token });
     })
