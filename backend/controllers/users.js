@@ -53,10 +53,12 @@ const createUser = ((req, res, next) => {
 function changeInfo(req, res, next) {
   const { name, about } = req.body;
 
-  User.findByIdAndUpdate(req.user._id, { name, about }, { new: true, runValidators: true })
-    .then((user) => {
-      checkNotFoundError(user);
-      return res.status(200).send({ data: user });
+  User.findById(req.user._id)
+    .orFail(() => new NotFoundError('Пользователь не найден'))
+    .then(() => {
+      User.findByIdAndUpdate(req.user._id, { name, about }, { new: true, runValidators: true })
+        .then((user) => res.status(200).send({ data: user }))
+        .catch(next(new ValidationError()));
     })
     .catch(next);
 }
