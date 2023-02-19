@@ -6,6 +6,8 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const NotFoundError = require('../errors/NotFoundError');
 const ValidationError = require('../errors/ValidationError');
+const ExistingEmailError = require("../errors/ExistingEmailError");
+const AuthorizationError = require("../errors/AuthorizationError");
 const { checkNotFoundError } = require('../utils/errorChecking');
 
 const getUsers = (req, res, next) => User.find({})
@@ -22,11 +24,10 @@ const getUserById = (req, res, next) => User.findById(req.params.userId)
   .catch(next);
 
 const getCurrentUser = (req, res, next) => User.findById(req.user._id)
-  .then((user) => {
-    checkNotFoundError(user);
-    return res.status(200).send({ data: user });
-  })
-  .catch(next);
+    .then((user) => {
+        return res.status(200).send({data: user});
+    })
+    .catch(next);
 
 const createUser = ((req, res, next) => {
   const {
@@ -38,7 +39,6 @@ const createUser = ((req, res, next) => {
       name, about, avatar, email, password: hash,
     }))
     .then((user) => {
-      checkNotFoundError({ user });
       return res.status(200).send(user.toObject({
         // eslint-disable-next-line no-shadow
         transform: (doc, res) => {
@@ -47,7 +47,13 @@ const createUser = ((req, res, next) => {
         },
       }));
     })
-    .catch(next);
+    .catch((err) => {
+        if (err.code === 11000) {
+            next(new ExistingEmailError())
+        } else {
+            next(new ValidationError())
+        }
+    });
 });
 
 function changeInfo(req, res, next) {
