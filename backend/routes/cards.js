@@ -3,7 +3,7 @@ const { celebrate, Joi } = require('celebrate');
 const {
   getCards, deleteCard, createCard, likeCard, dislikeCard,
 } = require('../controllers/cards');
-const { throwEror } = require('../utils/throwError');
+const { throwError } = require('../utils/throwError');
 const auth = require('../middlewares/auth');
 
 router.get('/cards', auth, getCards);
@@ -29,6 +29,6 @@ router.delete('/cards/:cardId/likes', auth, celebrate({
     cardId: Joi.string().alphanum().length(24),
   }),
 }), dislikeCard);
-router.all('*', throwEror);
+router.all('*', throwError);
 
 module.exports = router;

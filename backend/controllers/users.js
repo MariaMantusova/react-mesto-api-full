@@ -6,28 +6,20 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const NotFoundError = require('../errors/NotFoundError');
 const ValidationError = require('../errors/ValidationError');
-const ExistingEmailError = require("../errors/ExistingEmailError");
-const AuthorizationError = require("../errors/AuthorizationError");
-const { checkNotFoundError } = require('../utils/errorChecking');
+const ExistingEmailError = require('../errors/ExistingEmailError');
 
 const getUsers = (req, res, next) => User.find({})
-  .then((users) => {
-    res.status(200).send(users);
-  })
+  .then((users) => res.status(200).send(users))
   .catch(next);
 
 const getUserById = (req, res, next) => User.findById(req.params.userId)
-  .then((user) => {
-    checkNotFoundError(user);
-    return res.status(200).send({ data: user });
-  })
+  .orFail(() => new NotFoundError('Пользователь не найден'))
+  .then((user) => res.status(200).send({ data: user }))
   .catch(next);
 
 const getCurrentUser = (req, res, next) => User.findById(req.user._id)
-    .then((user) => {
-        return res.status(200).send({data: user});
-    })
-    .catch(next);
+  .then((user) => res.status(200).send({ data: user }))
+  .catch(next);
 
 const createUser = ((req, res, next) => {
   const {
@@ -38,21 +30,19 @@ const createUser = ((req, res, next) => {
     .then((hash) => User.create({
       name, about, avatar, email, password: hash,
     }))
-    .then((user) => {
-      return res.status(200).send(user.toObject({
-        // eslint-disable-next-line no-shadow
-        transform: (doc, res) => {
-          delete res.password;
-          return res;
-        },
-      }));
-    })
+    .then((user) => res.status(200).send(user.toObject({
+      // eslint-disable-next-line no-shadow
+      transform: (doc, res) => {
+        delete res.password;
+        return res;
+      },
+    })))
     .catch((err) => {
-        if (err.code === 11000) {
-            next(new ExistingEmailError())
-        } else {
-            next(new ValidationError())
-        }
+      if (err.code === 11000) {
+        next(new ExistingEmailError());
+      } else {
+        next(new ValidationError());
+      }
     });
 });
 
@@ -64,7 +54,7 @@ function changeInfo(req, res, next) {
     .then(() => {
       User.findByIdAndUpdate(req.user._id, { name, about }, { new: true, runValidators: true })
         .then((user) => res.status(200).send({ data: user }))
-        .catch(next(new ValidationError()));
+        .catch(() => next(new ValidationError()));
     })
     .catch(next);
 }
@@ -77,7 +67,7 @@ const changeAvatar = (req, res, next) => {
     .then(() => {
       User.findByIdAndUpdate(req.user._id, { avatar }, { new: true, runValidators: true })
         .then((user) => res.status(200).send({ data: user }))
-        .catch(next(new ValidationError()));
+        .catch(() => next(new ValidationError()));
     })
     .catch(next);
 };

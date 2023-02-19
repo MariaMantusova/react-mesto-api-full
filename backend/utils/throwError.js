@@ -1,3 +1,3 @@
-const throwEror = (req, res) => res.status(404).send({ message: 'NotFoungError' });
+const throwError = (req, res) => res.status(404).send({ message: 'NotFoungError' });
 
-module.exports = { throwEror };
+module.exports = { throwError };
