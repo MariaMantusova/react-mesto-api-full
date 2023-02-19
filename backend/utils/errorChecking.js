@@ -4,7 +4,7 @@ const ValidationError = require('../errors/ValidationError');
 
 const checkNotFoundError = (model) => {
   if (model === null) {
-    throw new NotFoundError('NotFound');
+    throw new NotFoundError();
   }
 };
 

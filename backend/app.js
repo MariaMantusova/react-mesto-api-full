@@ -22,7 +22,6 @@ const allowedCors = [
 
 const userRouter = require('./routes/users');
 const cardRouter = require('./routes/cards');
-const { handleError } = require('./utils/errorChecking');
 
 const { PORT = 3000 } = process.env;
 
@@ -93,7 +92,7 @@ app.use(errors());
 
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
-  const { statusCode = 500, message } = handleError(err);
+  const { statusCode = 500, message } = err;
 
   res
     .status(statusCode)

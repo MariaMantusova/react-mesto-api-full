@@ -4,6 +4,8 @@ const { NODE_ENV, JWT_SECRET } = process.env;
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
+const NotFoundError = require('../errors/NotFoundError');
+const ValidationError = require('../errors/ValidationError');
 const { checkNotFoundError } = require('../utils/errorChecking');
 
 const getUsers = (req, res, next) => User.find({})
@@ -62,10 +64,12 @@ function changeInfo(req, res, next) {
 const changeAvatar = (req, res, next) => {
   const { avatar } = req.body;
 
-  User.findByIdAndUpdate(req.user._id, { avatar }, { new: true, runValidators: true })
-    .then((user) => {
-      checkNotFoundError(user);
-      return res.status(200).send({ data: user });
+  User.findById(req.user._id)
+    .orFail(() => new NotFoundError('Пользователь не найден'))
+    .then(() => {
+      User.findByIdAndUpdate(req.user._id, { avatar }, { new: true, runValidators: true })
+        .then((user) => res.status(200).send({ data: user }))
+        .catch(next(new ValidationError()));
     })
     .catch(next);
 };
