@@ -17,7 +17,7 @@ const limiter = rateLimit({
 const allowedCors = [
   'https://project.mymesto.nomoredomainsclub.ru',
   'http://project.mymesto.nomoredomainsclub.ru',
-  'localhost:3000'
+  'localhost:3000',
 ];
 
 const userRouter = require('./routes/users');
@@ -34,15 +34,15 @@ app.use(requestLogger);
 app.use(helmet());
 app.use(limiter);
 app.use(bodyParser.json());
-app.use('/', function(req, res, next) {
+app.use('/', (req, res, next) => {
   const { origin } = req.headers;
   const { method } = req;
-  const DEFAULT_ALLOWED_METHODS = "GET,HEAD,PUT,PATCH,POST,DELETE";
+  const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
   const requestHeaders = req.headers['access-control-request-headers'];
 
   if (allowedCors.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
-    res.header("Access-Control-Allow-Credentials", "true")
+    res.header('Access-Control-Allow-Credentials', 'true');
   }
 
   if (method === 'OPTIONS') {
@@ -51,7 +51,7 @@ app.use('/', function(req, res, next) {
     return res.end();
   }
 
-  next();
+  return next();
 });
 
 app.get('/crash-test', () => {

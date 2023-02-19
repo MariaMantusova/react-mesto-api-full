@@ -1,9 +1,9 @@
-const {NODE_ENV, JWT_SECRET} = process.env;
+const { NODE_ENV, JWT_SECRET } = process.env;
 const jwt = require('jsonwebtoken');
 const NeedAuthError = require('../errors/NeedAuthError');
 
 module.exports = (req, res, next) => {
-  const {authorization} = req.headers;
+  const { authorization } = req.headers;
 
   if (!authorization || !authorization.startsWith('Bearer ')) {
     throw new NeedAuthError();
