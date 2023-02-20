@@ -1,5 +1,4 @@
 const express = require('express');
-const router = require('express').Router();
 const rateLimit = require('express-rate-limit');
 const { celebrate, Joi, errors } = require('celebrate');
 const bodyParser = require('body-parser');
@@ -7,7 +6,6 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const { login, createUser } = require('./controllers/users');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const { throwError } = require('../utils/throwError');
 
 const app = express();
 
@@ -24,7 +22,6 @@ const allowedCors = [
 
 const userRouter = require('./routes/users');
 const cardRouter = require('./routes/cards');
-const NotFoundError = require("./errors/NotFoundError");
 
 const { PORT = 3000 } = process.env;
 
@@ -89,7 +86,6 @@ app.post('/signup', celebrate({
 }), createUser);
 app.use('/', userRouter);
 app.use('/', cardRouter);
-router.all('*', next(new NotFoundError('Страница не найдена')));
 
 app.use(errorLogger);
 app.use(errors());

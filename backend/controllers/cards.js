@@ -20,7 +20,13 @@ const deleteCard = (req, res, next) => {
     })
     .then(() => Card.findByIdAndRemove(req.params.cardId, { new: true }))
     .then((card) => res.send({ data: card }))
-    .catch(next);
+    .catch((err) => {
+      if (err.name === 'CastError') {
+        next(new ValidationError());
+      } else {
+        next(err);
+      }
+    });
 };
 
 const createCard = (req, res, next) => {
@@ -29,33 +35,47 @@ const createCard = (req, res, next) => {
 
   Card.create({ name, link, owner })
     .then((card) => res.send({ data: card }))
-    .catch(() => next(new ValidationError()));
+    .catch((err) => {
+      if (err.name === 'CastError') {
+        next(new ValidationError());
+      } else {
+        next(err);
+      }
+    });
 };
 
 const likeCard = (req, res, next) => {
-  Card.findById(req.params.cardId)
+  Card.findByIdAndUpdate(
+    req.params.cardId,
+    { $addToSet: { likes: req.user._id } },
+    { new: true },
+  )
     .orFail(() => new NotFoundError('Карточка не найдена'))
-    .then(() => {
-      Card.findByIdAndUpdate(
-        req.params.cardId,
-        { $addToSet: { likes: req.user._id } },
-        { new: true },
-      )
-        .then((card) => res.send(card))
-        .catch(() => next(new ValidationError()));
-    })
-    .catch(next);
+    .then((card) => res.send(card))
+    .catch((err) => {
+      if (err.name === 'CastError') {
+        next(new ValidationError());
+      } else {
+        next(err);
+      }
+    });
 };
 
 const dislikeCard = (req, res, next) => {
-  Card.findById(req.params.cardId)
+  Card.findByIdAndUpdate(
+    req.params.cardId,
+    { $pull: { likes: req.user._id } },
+    { new: true },
+  )
     .orFail(() => new NotFoundError('Карточка не найдена'))
-    .then(() => {
-      Card.findByIdAndUpdate(req.params.cardId, { $pull: { likes: req.user._id } }, { new: true })
-        .then((card) => res.send(card))
-        .catch(() => next(new ValidationError()));
-    })
-    .catch(next);
+    .then((card) => res.send(card))
+    .catch((err) => {
+      if (err.name === 'CastError') {
+        next(new ValidationError());
+      } else {
+        next(err);
+      }
+    });
 };
 
 module.exports = {
