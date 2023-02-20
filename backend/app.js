@@ -24,6 +24,7 @@ const allowedCors = [
 
 const userRouter = require('./routes/users');
 const cardRouter = require('./routes/cards');
+const NotFoundError = require("./errors/NotFoundError");
 
 const { PORT = 3000 } = process.env;
 
@@ -88,7 +89,7 @@ app.post('/signup', celebrate({
 }), createUser);
 app.use('/', userRouter);
 app.use('/', cardRouter);
-router.all('*', throwError);
+router.all('*', next(new NotFoundError('Страница не найдена')));
 
 app.use(errorLogger);
 app.use(errors());
