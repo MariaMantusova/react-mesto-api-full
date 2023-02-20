@@ -1,4 +1,5 @@
 const express = require('express');
+const router = require('express').Router();
 const rateLimit = require('express-rate-limit');
 const { celebrate, Joi, errors } = require('celebrate');
 const bodyParser = require('body-parser');
@@ -6,6 +7,7 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const { login, createUser } = require('./controllers/users');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const { throwError } = require('../utils/throwError');
 
 const app = express();
 
@@ -86,6 +88,7 @@ app.post('/signup', celebrate({
 }), createUser);
 app.use('/', userRouter);
 app.use('/', cardRouter);
+router.all('*', throwError);
 
 app.use(errorLogger);
 app.use(errors());
